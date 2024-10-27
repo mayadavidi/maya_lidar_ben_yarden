@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר - Sweet Symphony</title>
+    <link rel="stylesheet" href="styles/myStyle.css">
+    <link rel="icon" href="images/favicon.jpg" type="image/png">
+    <script>
+        function showConfirmation() {
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.style.display = 'block';
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Sweet Symphony Logo" class="logo">
+        </a>
+        <h1>Sweet Symphony</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="confectionery_history.html">היסטוריה</a></li>
+                <li><a href="confectionery_workshops.html">סדנאות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת אתר</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- תפריט פרורי לחם -->
+    <nav class="breadcrumb">
+        <a href="index.html">בית</a> &gt; <a href="contactUs.html">צור קשר</a>
+    </nav>
+
+    <main>
+        <section class="contact-section">
+            <h2>צור קשר עם Sweet Symphony</h2>
+            <p>נשמח לשמוע מכם! מלאו את הפרטים הבאים ונחזור אליכם בהקדם.</p>
+            
+            <!-- הודעת חיווי -->
+            <p id="confirmationMessage" style="display: none; color: green; font-weight: bold;">
+                ההודעה נשלחה בהצלחה! נחזור אליכם בהקדם.
+            </p>
+
+            <form id="contactForm" onsubmit="event.preventDefault(); showConfirmation();">
+                <label for="fullName">שם מלא:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">טלפון:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="contactReason">סוג הפנייה:</label>
+                <select id="contactReason" name="contactReason">
+                    <option value="general">שאלה כללית</option>
+                    <option value="workshop">פרטים על סדנאות</option>
+                    <option value="order">הזמנת מוצרים</option>
+                    <option value="feedback">פידבק והצעות</option>
+                </select>
+
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">שלח</button>
+            </form>
+        </section>
+
+        <!-- מידע נוסף על יצירת קשר -->
+        <section class="additional-info">
+            <h3>מידע נוסף על יצירת קשר</h3>
+            <p>אנו זמינים עבורכם במהלך שעות הפעילות וניתן לפנות אלינו בדרכים נוספות:</p>
+            
+            <h4>שעות פעילות:</h4>
+            <ul>
+                <li>ראשון - חמישי: 9:00 - 18:00</li>
+                <li>שישי: 9:00 - 14:00</li>
+                <li>שבת: סגור</li>
+            </ul>
+            
+            <h4>דרכי התקשרות:</h4>
+            <ul>
+                <li>טלפון: <a href="tel:+123456789">+1 234 567 89</a></li>
+                <li>אימייל: <a href="mailto:info@sweetsymphony.com">info@sweetsymphony.com</a></li>
+                <li>כתובת: רחוב הדבש 15, תל אביב</li>
+            </ul>
+
+            <h4>עקבו אחרינו ברשתות החברתיות:</h4>
+            <ul>
+                <li><a href="https://facebook.com/sweetsymphony" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com/sweetsymphony" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/sweetsymphony" target="_blank">Twitter</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="confectionery_history.html">היסטוריה</a></li>
+                <li><a href="confectionery_workshops.html">סדנאות</a></li>
+                <li><a href="contactUs.html">צור קשר</a></li>
+                <li><a href="siteMap.html">מפת אתר</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
